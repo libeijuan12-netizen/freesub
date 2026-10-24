@@ -4,30 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇭 TH 01 - xiaohe
+- name: 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
   type: vless
-  server: support.zoom.us.v2ray.simspeedup.com
-  port: 80
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  server: 60.248.219.54
+  port: 443
+  uuid: 06e177f7-240d-4687-bd85-235505801a5e
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: ty986gfazs.cainiaohub.xyz
   network: ws
   ws-opts:
-    path: /ws
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: support.zoom.us.v2ray.simspeedup.com
+      Host: 60.248.219.54
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇭 TH 01 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇭 TH 01 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
 rules:
 - MATCH,PROXIES
